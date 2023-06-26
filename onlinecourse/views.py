@@ -124,7 +124,7 @@ def extract_answers(request):
    return submitted_anwsers
 
 
-def exam_result(request, course_id, submission_id):
+def show_exam_result(request, course_id, submission_id):
     context = {}
     course = get_object_or_404(Course, pk=course_id)
     submission = Submission.objects.get(id=submission_id)
